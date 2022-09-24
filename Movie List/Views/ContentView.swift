@@ -13,6 +13,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                SearchMovieBar(title: $movieViewModel.searchText)
                 List(movieViewModel.movies) { item in
                     MovieCell(displayData: item)
                 }
